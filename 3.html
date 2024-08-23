@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCRC游戏中心</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffb6c1;
+        }
+        .container {
+            text-align: center;
+        }
+        #play-button, #navigate-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        #play-button:hover, #navigate-button:hover {
+            background-color: #45a049;
+        }
+        #v5 {
+            display: block;
+            margin: 0 auto;
+            width: 300px; /* 设置图片的宽度 */
+            height: auto; /* 高度自动调整以保持比例 */
+        }
+    </style>
+</head>
+<body>
+    <div id="v4" class="container">
+        <img id="v5" src="zhuye.png" alt="首页图片">
+        <audio id="background-music" src="1.mp3" preload="auto"></audio>
+        <button id="play-button">播放专属音乐</button>
+        <button id="navigate-button">游戏中心</button>
+         <button id="maika-button">去购买卡密</button>
+    </div>
+
+    <script>
+        const playButton = document.getElementById('play-button');
+        const backgroundMusic = document.getElementById('background-music');
+        const navigateButton = document.getElementById('navigate-button');
+        const maikaButton = document.getElementById('maika-button');
+
+        playButton.addEventListener('click', () => {
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+                playButton.textContent = '暂停音乐';
+            } else {
+                backgroundMusic.pause();
+                playButton.textContent = '播放专属音乐';
+            }
+        });
+
+        navigateButton.addEventListener('click', () => {
+            window.location.href = '2.html'; // 跳转到2.html
+        });
+        maikaButton.addEventListener('click', () => {
+            window.location.href = 'https://916ka.longpai.hk/links/89ABF00D';
+        });
+        
+    </script>
+</body>
+</html>

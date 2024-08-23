@@ -1,0 +1,24 @@
+{
+	"appName": "LCRC游戏中心",
+	"appPackageName": "top.lcrcGame.duka",
+	"appVersionName": "1.100",
+	"appVersionCode": 100000,
+	"data": {		
+		"启用顶栏": true,
+		"顶栏标题": "读卡(LCRC)",
+		"顶栏颜色": "#add8e6",
+		"横屏": false,
+		"显示状态栏": true,
+		"启用进度条": true,
+		"进度条颜色": "#ffb6c1",
+		"支持打开外部应用": true,
+		"提示打开外部应用": true,
+		"启动页面": "index.html"
+	},
+	"indexPages": [
+		
+	],
+	"extraHeaders": {
+		
+	}
+}

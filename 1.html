@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Validation</title>
+</head>
+<body>
+    <h1>Enter Code</h1>
+    <input type="text" id="codeInput" placeholder="Enter code">
+    <button onclick="validateCode()">Submit</button>
+
+    <script>
+        // Function to load codes from an internal list
+        function loadCodes() {
+            // List of valid codes
+            const codes = `4XRduDXc
+7pPpYrlN
+xdF8njnt
+xuBTFts2
+xNGCIfuo`;
+            // Split the list into an array, trim each line, and remove any empty lines
+            return codes.split('\n').map(line => line.trim()).filter(line => line);
+        }
+
+        // Function to validate the input code
+        function validateCode() {
+            const inputCode = document.getElementById('codeInput').value.trim();
+            console.log('Input code:', inputCode); // Debugging line
+            const codes = loadCodes();
+            console.log('Loaded codes:', codes); // Debugging line
+
+            if (codes.includes(inputCode)) {
+                window.location.href = 'https://www.example.com'; // Replace with your target URL
+            } else {
+                alert('Code is incorrect. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
